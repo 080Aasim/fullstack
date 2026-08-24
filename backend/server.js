@@ -19,7 +19,7 @@ connectCloudinary();
 
 // Middlewares
 app.use(cors({
-  origin: ["http://localhost:5173","http://localhost:5174","https://ecommerce-xhww.onrender.com/"],
+  origin: ["http://localhost:5173","http://localhost:5174","https://fullstack-frontend-sable-three.vercel.app"],
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization", "token"],
   credentials: true

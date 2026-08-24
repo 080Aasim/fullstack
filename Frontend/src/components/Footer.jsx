@@ -1,5 +1,5 @@
 import React from "react";
-import { assets } from "../assets/assets";
+// import { assets } from "../assets/assets";
 import { Link, NavLink } from "react-router-dom";
 
 const Footer = () => {
@@ -7,7 +7,7 @@ const Footer = () => {
     <div>
       <div className="flex  flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-10 text-sm">
         <div className="">
-          <img src={assets.logo} className="mb-5 w-32" alt="" />
+          <img src="/forever_logo.svg" className="mb-5 w-32" alt="" />
           <p className="w-full md:w-2/3 text-gray-600">
             At FOREVER, we believe style is more than what you wear. It's how
             you express yourself. We bring together timeless essentials and

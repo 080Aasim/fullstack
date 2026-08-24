@@ -18,13 +18,13 @@ connectDB();
 connectCloudinary();
 
 // Middlewares
-app.use(express.json());
 app.use(cors({
-    origin: ["http://localhost:5173","http://localhost:5174","https://fullstack-frontend-sable-three.vercel.app"],
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization", "token"],
-    credentials: true
+  origin: ["http://localhost:5173","http://localhost:5174","https://ecommerce-xhww.onrender.com/"],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization", "token"],
+  credentials: true
 }));
+app.use(express.json());
 
 // api endpoints
 app.use("/api/user", userRouter);

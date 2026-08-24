@@ -1,5 +1,5 @@
-import dns from "dns"
-dns.setServers(['8.8.8.8', '1.1.1.1']);
+import dns from "dns";
+dns.setServers(["8.8.8.8", "1.1.1.1"]);
 
 import express from "express";
 import cors from "cors";
@@ -18,12 +18,19 @@ connectDB();
 connectCloudinary();
 
 // Middlewares
-app.use(cors({
-  origin: ["http://localhost:5173","http://localhost:5174","https://fullstack-frontend-sable-three.vercel.app"],
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  allowedHeaders: ["Content-Type", "Authorization", "token"],
-  credentials: true
-}));
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "http://localhost:5174",
+      "https://fullstack-frontend-sable-three.vercel.app",
+      "https://fullstack-admin-xi.vercel.app"
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization", "token"],
+    credentials: true,
+  }),
+);
 app.use(express.json());
 
 // api endpoints

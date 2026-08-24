@@ -11,8 +11,11 @@ const addProduct = async (req, res) => {
       category,
       subCategory,
       sizes,
-      bestseller,
+      bestSeller,
     } = req.body;
+
+    console.log(req.body.bestSeller);
+    console.log(typeof req.body.bestSeller);
 
     const image1 = req.files.image1 && req.files.image1[0];
     const image2 = req.files.image2 && req.files.image2[0];
@@ -20,7 +23,7 @@ const addProduct = async (req, res) => {
     const image4 = req.files.image4 && req.files.image4[0];
 
     const images = [image1, image2, image3, image4].filter(
-      (item) => item !== undefined
+      (item) => item !== undefined,
     );
 
     const imagesUrl = await Promise.all(
@@ -29,7 +32,7 @@ const addProduct = async (req, res) => {
           resource_type: "image",
         });
         return result.secure_url;
-      })
+      }),
     );
 
     const productData = {
@@ -38,13 +41,13 @@ const addProduct = async (req, res) => {
       price: Number(price),
       category,
       subCategory,
-      bestseller: bestseller === "true" ? true : false,
+      bestSeller: bestSeller === "true" ? true : false,
       sizes: JSON.parse(sizes),
       image: imagesUrl,
       date: Date.now(),
     };
 
-    console.log(productData);
+    // console.log(productData);
 
     const product = new productModel(productData);
     await product.save();

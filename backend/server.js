@@ -1,3 +1,6 @@
+import dns from "dns"
+dns.setServers(['8.8.8.8', '1.1.1.1']);
+
 import express from "express";
 import cors from "cors";
 import "dotenv/config";
@@ -16,7 +19,12 @@ connectCloudinary();
 
 // Middlewares
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: ["http://localhost:5173","http://localhost:5174"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization", "token"],
+    credentials: true
+}));
 
 // api endpoints
 app.use("/api/user", userRouter);

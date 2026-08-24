@@ -18,18 +18,28 @@ const Contact = () => {
         <div className="flex flex-col justify-center items-start gap-6">
           <p className="font-semibold text-xl text-gray-600">Our Store</p>
           <p className="text-gray-500">
-            54797 Wills Station <br /> Suite 259, Washington, USA
+            FOREVER Fashion Store <br /> 123 Fashion Avenue <br /> New Delhi,
+            India
           </p>
           <p className="text-gray-500">
-            Tel: (415) 555-2323 <br /> Email: admin@forever.com
+            Tel: +91 XXXXX XXXXX <br /> Email: foreversupport@forever.com
           </p>
-          <p className=' font-semibold text-xl text-gray-600'>Careers at Forever</p>
-          <p className='text-gray-600'>Learn more about our teams and job openings.</p>
-          <button className="border border-black px-8 py-4 text-sm 
-          hover:bg-black hover:text-white transition-all duration-500">Explore Jobs</button>
+          <p className=" font-semibold text-xl text-gray-600">
+            Careers at Forever
+          </p>
+          <p className="text-gray-600">
+            Join the FOREVER team We're always looking for passionate people who
+            love fashion, creativity, and technology..
+          </p>
+          <button
+            className="border border-black px-8 py-4 text-sm 
+          hover:bg-black hover:text-white transition-all duration-500"
+          >
+            Explore Jobs
+          </button>
         </div>
       </div>
-      <NewsLetterBox/>
+      <NewsLetterBox />
     </div>
   );
 };
